@@ -16,9 +16,9 @@ args = parser.parse_args()
 args.seq = args.seq.upper()
 if re.search('^[ACGTU]+$', args.seq):
     if re.search('T', args.seq):
-        print ('is DNA')
+        print ('This is DNA')
     elif re.search('U', args.seq):
-        print ('is RNA')
+        print ('This is RNA')
     else:
         print ('The sequence can be DNA or RNA')
 else:
@@ -28,6 +28,6 @@ if args.motif:
     args.motif = args.motif.upper()
     print(f'Motif search enabled: looking for motif "{args.motif}" in sequence "{args.seq}"... ', end = '')
     if re.search(args.motif, args.seq):
-        print("Found babay d")
+        print("Found motif")
     else:
         print("NOT FOUND")
